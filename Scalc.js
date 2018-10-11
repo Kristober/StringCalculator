@@ -4,8 +4,12 @@ function add(numbers) {
 	return 0;
 
 	if(numbers.includes(",")) {
+		var sum = 0;
 		var numArr = numbers.split(",");
-		return parseInt(numArr[0]) + parseInt(numArr[1]);
+		for(var i = 0; i < numArr.length; i++) {
+			sum += parseInt(numArr[i]);
+		}
+		return sum;
 	}
 
 	return parseInt(numbers);

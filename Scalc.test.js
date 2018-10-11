@@ -12,3 +12,7 @@ it("Should return the same number as inserted if n = 1", () => {
 it("Should return the sum of 2 numbers when n = 2", () => {
 	expect(add("5,4")).toBe(9);
 });
+
+it("Should return the sum of 5 numbers when n = 5", () => {
+	expect(add("1,2,3,4,5")).toBe(15);
+});
