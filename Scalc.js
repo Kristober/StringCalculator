@@ -3,7 +3,7 @@ function add(numbers) {
 	if(numbers == "")
 	return 0;
 
-	if(numbers.includes(",","\n")) {
+	if(numbers.includes(",") | numbers.includes("\n")) {
 		var sum = 0;
 		var numArr = numbers.split(/[,\n;]/);
 
