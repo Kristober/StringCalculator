@@ -5,7 +5,7 @@ function add(numbers) {
 		return 0;
 	}
 
-	
+	//array which we'll later store negative numbers in
 	var negNum = [];
 
 	if(numbers.includes(",") | numbers.includes("\n")) {
@@ -16,18 +16,18 @@ function add(numbers) {
 			if(numArr[i] < 0) {
 				negNum.push(numArr[i]);
 			}
-			else {
+			else if(numArr[i] < 1001){
 				sum += parseInt(numArr[i]);
 			}
 		}
 
 		numbers = sum;
 	}
+	//incase a single negative number is sent in
 	else if(parseInt(numbers) < 0) {
 		negNum.push(numbers[0]);
 	}
 
-	
 	if(negNum == 0) {
 		return parseInt(numbers);
 	}

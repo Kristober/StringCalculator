@@ -33,4 +33,8 @@ it("throw if we find a negative number when a single number is sent in the funct
 	}).toThrow();
 });
 
+it("Should return the sum of 3 numbers when n = 3 but ignore the number if its higher 1000", () => {
+	expect(add("1,2\n1001")).toBe(3);
+});
+
 
