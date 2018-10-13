@@ -37,4 +37,8 @@ it("Should return the sum of 3 numbers when n = 3 but ignore the number if its h
 	expect(add("1,2\n1001")).toBe(3);
 });
 
+it("Should return the sum of 3 numbers when n = 3 and seperate them with the new delimeter", () => {
+	expect(add("//_2,3_1\n2_1")).toBe(9);
+});
 
+//add("//;4,3;4");

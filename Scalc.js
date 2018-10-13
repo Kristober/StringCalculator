@@ -1,6 +1,13 @@
 //string calculator
 
 function add(numbers) {
+	if(numbers.startsWith("//")) {
+		var delimeter = numbers.substring(2, 3);
+		//we replace all of the delimeteres with a ,
+		//so "//;4,3;2" -> "//,4,3,2" for example
+		numbers = numbers.replace(new RegExp(delimeter, 'g'), ",");
+	}
+
 	if(numbers == "") {
 		return 0;
 	}
@@ -10,7 +17,7 @@ function add(numbers) {
 
 	if(numbers.includes(",") | numbers.includes("\n")) {
 		var sum = 0;
-		var numArr = numbers.split(/[,\n;]/);
+		var numArr = numbers.split(/[,\n]/);
 
 		for(var i = 0; i < numArr.length; i++) {
 			if(numArr[i] < 0) {
